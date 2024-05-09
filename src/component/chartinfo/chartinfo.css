@@ -1,0 +1,41 @@
+<<<<<<< HEAD
+.ChartBottom{
+=======
+.featuredBottomt{
+>>>>>>> e6545f23545bb395cd7fe05e4be18f5ab81c621b
+    width: 96%;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 1.5vw;
+}
+
+<<<<<<< HEAD
+.ChartBottomItem{
+=======
+.featuredBottomItemt{
+>>>>>>> e6545f23545bb395cd7fe05e4be18f5ab81c621b
+    flex:1;
+    border-radius: 10px;
+    cursor: pointer;
+    -webkit-box-shadow: 0px 0px 12px -1px #000000;
+    box-shadow: 0px 0px 12px -1px #000000;
+}
+
+<<<<<<< HEAD
+.ChartBottomContainer{
+=======
+.featuredBottomMoneyContainer{
+>>>>>>> e6545f23545bb395cd7fe05e4be18f5ab81c621b
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+<<<<<<< HEAD
+.ChartBottomFont{
+=======
+.featuredBottomMoney{
+>>>>>>> e6545f23545bb395cd7fe05e4be18f5ab81c621b
+    font-size: 30px;
+    font-weight: 600;
+}

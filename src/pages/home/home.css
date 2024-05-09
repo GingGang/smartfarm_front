@@ -1,0 +1,10 @@
+.home{
+    flex: 4;
+    display: flex;
+    flex-direction: column;
+}
+
+.homeMargin{
+    margin-top: 55px;
+    display: flex;
+}
