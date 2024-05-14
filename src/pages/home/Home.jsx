@@ -6,6 +6,8 @@ import ChartInfo from "../../component/chartinfo/ChartInfo";
 import Water from "../../component/water/Water";
 import LandWater from "../../component/landwater/LandWater";
 import { SensorDoor } from "@mui/icons-material";
+import LedFanBool from "../../component/ledfanbool/LedFanBool";
+import PumpBool from "../../component/pumpbool/PumpBool";
 
 export default function Home({ data }){
     return( 
@@ -24,9 +26,8 @@ export default function Home({ data }){
                 <LandWater ground1={data.ground1Data} ground2={data.ground2Data}/>
             </div>
             <div className="homeMargin">
-                {/* 이 부분을 수정했습니다. */}
-                <Graph tempData={data.tempData}/> 
-                <Graph tempData={data.tempData}/> 
+                <LedFanBool/>
+                <PumpBool/>
                 <Graph tempData={data.tempData}/> 
             </div>
         </div>

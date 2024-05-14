@@ -1,6 +1,6 @@
 .sidebar{
-    flex : 0.7;
-    height: calc(100vh - 50px);
+    flex: 0.7;
+    height: calc(100vh - 50px); /* 화면 높이에서 50px을 뺀 만큼의 높이 */
     background-color: rgb(240, 239, 239);
     align-items: center;
     position: sticky;
@@ -30,21 +30,19 @@
 
 .SideAvatar{
     margin-top: auto;
-    margin-left: auto;
-    height: 12vw;
-    width: 13vw;
+    margin-left: 2.8vw;
+    height: clamp(200px, 12vw, 120px); /* 최소 100px, 뷰포트 너비의 12%, 최대 120px */
+    width: clamp(200px, 13vw, 130px); /* 최소 100px, 뷰포트 너비의 13%, 최대 130px */
     border-radius: 50%;
     cursor: pointer;
-    display: block;
 }
 
 .SidebarText{
     text-align: center;
-    font-size: 30px;
+    font-size: clamp(20px, 3vw, 30px); /* 최소 20px, 뷰포트 너비의 3%, 최대 30px */
 }
 
 .SidebarLogo{
     margin-top: 5vw;
-    margin-left: 2vw;
-    
-    }
+    margin-left: 1vw;
+}
