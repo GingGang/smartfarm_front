@@ -9,26 +9,26 @@ import { SensorDoor } from "@mui/icons-material";
 import LedFanBool from "../../component/ledfanbool/LedFanBool";
 import PumpBool from "../../component/pumpbool/PumpBool";
 
-export default function Home({ data }){
+export default function Home({ LatestData }){
     return( 
         <div className="home">
+            <div className="homeMargin">
+                <Graph temp={LatestData.LatestTempData} />
+                <Water humi={LatestData.LatestHumiData}/>
+                <LandWater ground1={LatestData.LatestGround1Data} ground2={LatestData.LatestGround2Data}/>
+                <LedFanBool/>
+            </div>
             <div>
                 <ChartInfo 
-                    temp={data.tempData}
-                    humi={data.humiData}
-                    ground1={data.ground1Data}
-                    ground2={data.ground2Data}
+                    temp={LatestData.tempData}
+                    humi={LatestData.humiData}
+                    ground1={LatestData.ground1Data}
+                    ground2={LatestData.ground2Data}
                 />
             </div>
+            
             <div className="homeMargin">
-                <Graph temp={data.tempData} />
-                <Water humi={data.humiData}/>
-                <LandWater ground1={data.ground1Data} ground2={data.ground2Data}/>
-            </div>
-            <div className="homeMargin">
-                <LedFanBool/>
-                <PumpBool/>
-                <Graph tempData={data.tempData}/> 
+                
             </div>
         </div>
     )

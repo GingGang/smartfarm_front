@@ -1,10 +1,12 @@
+
 .home{
-    flex: 4;
+    flex: 3;
     display: flex;
     flex-direction: column;
+    z-index: 200;
 }
 
 .homeMargin{
-    margin-top: 10px;
+    margin-top: -55px;
     display: flex;
 }

@@ -86,7 +86,7 @@ export function MixedChart({ temp, humi, ground1, ground2 }) {
     };
   }, [temp, humi, ground1, ground2]); // 의존성 배열에 prop 값을 포함하여 prop이 변경될 때마다 차트를 업데이트합니다.
 
-  return <div style={{height: "13vw", width: "75vw"}}>
+  return <div style={{height: "28vw", width: "75vw"}}>
     <canvas ref={chartRef}></canvas>
   </div>;
 }

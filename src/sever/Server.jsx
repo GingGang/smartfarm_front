@@ -10,7 +10,7 @@ function SmartFarmComponent() {
   useEffect(() => {
     async function fetchSensorData() {
       try {
-        const response = await fetch('http://220.85.199.216:8008/api/latest');
+        const response = await fetch('http://192.168.219.102:8008/api/latest');
         const jsonResponse = await response.json();
         // 'data' 키 아래 있는 센서 데이터 배열에 접근
         const sensorData = jsonResponse.data;

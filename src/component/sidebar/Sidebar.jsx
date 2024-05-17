@@ -1,7 +1,7 @@
 import React from "react";
 import './sidebar.css'
 import imgLogo from './baekPro.jpg'
-import imgLogo2 from './logo.png'
+import imgLogo2 from './logo.gif'
 import { useNavigate } from 'react-router-dom';
 
 export default function Sidebar(){
@@ -11,13 +11,14 @@ export default function Sidebar(){
         <div className="sidebar">
             <div className="sidebarWrapper">
                 <div className="sidebarMenu">
-                    <img
-                        src={imgLogo}
-                        alt='logo image'
-                        className="SideAvatar"
-                    />
-                </div>
+                    <div className="SidebarLogo">
+                        <img src={imgLogo2} alt='logo image'/>
+                        <div className="SidebarLogoText">JM SmartFarm</div>
 
+
+                    </div>
+                    <img src={imgLogo} alt='logo image' className="SideAvatar"/>
+                    </div>
                 <div className="sidebarListItem">
                     <h3 onClick={() => navigate('/')} className="SidebarText">Dashboard</h3>
                 </div>
@@ -31,12 +32,7 @@ export default function Sidebar(){
 
                 </div>
                 
-                <div className="SidebarLogo">
-                <img
-                        src={imgLogo2}
-                        alt='logo image'
-                    />
-                </div>
+                
                 
             </div>
         </div>
