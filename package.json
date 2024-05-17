@@ -2,10 +2,7 @@
   "name": "smartfarm",
   "version": "0.1.0",
   "private": true,
-<<<<<<< HEAD
-  "proxy": "http://192.168.219.107:8008",
-=======
->>>>>>> e6545f23545bb395cd7fe05e4be18f5ab81c621b
+
   "dependencies": {
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
@@ -14,10 +11,9 @@
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
-<<<<<<< HEAD
+
     "axios": "^1.6.8",
-=======
->>>>>>> e6545f23545bb395cd7fe05e4be18f5ab81c621b
+
     "chart.js": "^4.4.2",
     "react": "^18.2.0",
     "react-chartjs-2": "^5.2.0",

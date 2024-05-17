@@ -2,21 +2,21 @@ import React from 'react';
 import './chartinfo.css';
 import MixedChart from './ChartMain';
 
-function App() {
-      
+function ChartInfo({ temp, humi, ground1, ground2 }) {
+    console. log(ground2)
     return(
-<<<<<<< HEAD
+
       <div className="ChartBottom">
           <div className="ChartBottomItem">
               <div className="ChartBottomContainer">
                   <div className="ChartBottomFont">
-=======
-      <div className="featuredBottomt">
-          <div className="featuredBottomItemt">
-              <div className="featuredBottomMoneyContainer">
-                  <div className="featuredBottomMoney">
->>>>>>> e6545f23545bb395cd7fe05e4be18f5ab81c621b
-                    <MixedChart></MixedChart>
+
+                    <MixedChart
+                      temp={temp}
+                      humi={humi}
+                      ground1={ground1}
+                      ground2={ground2}
+                    />
                   </div>
               </div>
           </div>
@@ -24,4 +24,4 @@ function App() {
     )
 }
 
-export default App;
+export default ChartInfo;

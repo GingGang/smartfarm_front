@@ -1,12 +1,15 @@
 import React from "react";
 import './graph.css';
+import ThermostatIcon from '@mui/icons-material/Thermostat';
 
-export default function Graph(){
+// props 객체에서 tempData를 구조 분해 할당
+export default function Graph({ temp }){
     return(
         <div className="GraphBox">
             <div className="GraphBoxIn">
                 <div className="GraphBoxContainer">
-                    <span className="GraphBoxFont">온도 : 36.5 °C</span>
+                    <ThermostatIcon style={{ fontSize: '50px' , marginLeft:'1vw'}} />
+                    <span className="GraphBoxFont">온도 : {temp} °C</span>
                 </div>
             </div>
         </div>

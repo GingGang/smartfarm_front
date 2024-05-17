@@ -1,8 +1,10 @@
 import React from "react";
 import './home.css';
-import FeaturedInfo from "../../component/graph/Graph";
-import FeaturedInfoBottom from "../../component/temp/Temp";
 import ChartInfo from "../../component/chartinfo/ChartInfo";
+import HistroyTemp from "../../component/homehistory/HistoryTemp";
+import HistroyWater from "../../component/homehistory/HistoryWater";
+import HistroyBool from "../../component/homehistory/HistoryBool";
+
 
 
 export default function HomeHistory(){
@@ -10,7 +12,9 @@ export default function HomeHistory(){
 
         <div className="home">
             <div>
-                <ChartInfo/>
+                <HistroyTemp/>
+                <HistroyWater/>
+                <HistroyBool/>
             </div>
 
         </div>
