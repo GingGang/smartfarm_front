@@ -8,7 +8,7 @@ export default function Graph({ temp }){
         <div className="GraphBox">
             <div className="GraphBoxIn">
                 <div className="GraphBoxContainer">
-                    <ThermostatIcon style={{ fontSize: '50px' , marginLeft:'1vw'}} />
+                    <ThermostatIcon style={{ fontSize: '35px' , marginLeft:'1vw'}} />
                     <span className="GraphBoxFont">온도 : {temp} °C</span>
                 </div>
             </div>

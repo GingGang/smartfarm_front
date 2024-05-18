@@ -10,7 +10,7 @@ export default function Topbar(){
         <div className="topbar">
             <div className="topbarWrapper">
                 <div className="topleft">
-                    <span className="logo">JM SmartFarm</span>
+                    <span className="logo">DASHBOARD</span>
                 </div>
             </div>
         </div>

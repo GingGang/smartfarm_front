@@ -11,11 +11,7 @@ export default function PumpBool() {
             <div className="PumpIn">
                 <div className="PumpContainer">
                     <span className="PumpFont">
-                        펌프 : {
-                            pumpOn 
-                            ? <SensorsIcon style={{ fontSize: '60px'}} />
-                            : <SensorsOffIcon style={{ fontSize: '60px'}} />
-                        }
+                        
                     </span>
                 </div>
             </div>

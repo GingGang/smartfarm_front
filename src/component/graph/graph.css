@@ -1,14 +1,15 @@
 .GraphBox{
-    width: 100%; /* 유지 */
+    width: 80%; /* 유지 */
+    height: 55%;
     display: flex;
 }
 
 .GraphBoxIn{
     flex:1;
-    margin: 1.5vw; /* 상대적인 마진 값 설정 */
-    padding: 3vw; /* 유지 */
+    margin: 1vw; /* 상대적인 마진 값 설정 */
+    padding: 2vw; /* 유지 */
     border-radius: 1vw; /* 상대적인 값을 사용 */
-
+    background-color: white;
     -webkit-box-shadow: 0px 0px 1.2vw -0.1vw #000000; /* 상대적인 그림자 크기 */
     box-shadow: 0px 0px 1.2vw -0.1vw #000000; /* 상대적인 그림자 크기 */
 }
@@ -21,7 +22,7 @@
 }
 
 .GraphBoxFont{
-    font-size: clamp(1.6vw, 2vw, 2.5vw); /* vw 단위를 사용하여 해상도에 따라 조정 */
+    font-size: clamp(1.4vw, 1.7vw, 2vw); /* vw 단위를 사용하여 해상도에 따라 조정 */
     font-weight: 550; /* 수정된 폰트 무게 (기존 값이 잘못된 것으로 보임) */
     white-space: nowrap;
 
