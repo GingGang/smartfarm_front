@@ -13,7 +13,8 @@ export default function Sidebar(){
                 <div className="sidebarMenu">
                     <div className="SidebarLogo">
                         <img src={imgLogo2} alt='logo image'/>
-                        <div className="SidebarLogoText">JM SmartFarm</div>
+
+                        <div className="SidebarLogoText">JMO</div>
 
 
                     </div>

@@ -1,20 +1,17 @@
 import React from "react";
 import './home.css';
-import ChartInfo from "../../component/chartinfo/ChartInfo";
-import HistroyTemp from "../../component/homehistory/HistoryTemp";
-import HistroyWater from "../../component/homehistory/HistoryWater";
+import ChartInfo from "../../component/chart/ChartInfo";
 import HistroyBool from "../../component/homehistory/HistoryBool";
+import HistoryChart from "../../component/homehistory/HistoryChart";
 
 
 
-export default function HomeHistory(){
+export default function HomeHistory({MonthData, HourData}){
     return(
 
         <div className="home">
             <div>
-                <HistroyTemp/>
-                <HistroyWater/>
-                <HistroyBool/>
+                <HistoryChart MonthData={MonthData} HourData={HourData}/>
             </div>
 
         </div>

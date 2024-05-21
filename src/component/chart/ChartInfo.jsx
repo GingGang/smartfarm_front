@@ -2,8 +2,8 @@ import React from 'react';
 import './chartinfo.css';
 import MixedChart from './ChartMain';
 
-function ChartInfo({ temp, humi, ground1, ground2 }) {
-    console. log(ground2)
+
+function ChartInfo({ WeekData }) {
     return(
 
       <div className="ChartBottom">
@@ -11,12 +11,9 @@ function ChartInfo({ temp, humi, ground1, ground2 }) {
               <div className="ChartBottomContainer">
                   <div className="ChartBottomFont">
 
-                    <MixedChart
-                      temp={temp}
-                      humi={humi}
-                      ground1={ground1}
-                      ground2={ground2}
-                    />
+                    <MixedChart WeekData={WeekData}>
+
+                    </MixedChart>
                   </div>
               </div>
           </div>

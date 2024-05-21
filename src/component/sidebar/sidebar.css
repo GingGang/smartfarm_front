@@ -51,7 +51,8 @@
 
 .SidebarLogoText{
     text-align: center;
-    font-size: clamp(1.3vw, 1.5vw, 1.7vw); /* 최소 20px, 뷰포트 너비의 3%, 최대 30px */
+    margin-left: 0.7vw;
+    font-size: clamp(2.5vw, 3vw, 3.5vw); /* 최소 20px, 뷰포트 너비의 3%, 최대 30px */
     white-space: nowrap;
     font-weight: 1000;
 }

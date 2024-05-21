@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import './ledfanbool.css';
 
 import WbIncandescentOutlinedIcon from '@mui/icons-material/WbIncandescentOutlined';
@@ -10,11 +10,17 @@ import AirIcon from '@mui/icons-material/Air';
 import SensorsIcon from '@mui/icons-material/Sensors';
 import SensorsOffIcon from '@mui/icons-material/SensorsOff';
 
-export default function LedFanBool() {
+export default function LedFanBool({ledbool,fanbool,pumpbool}) {
     // LED와 FAN의 상태를 관리하는 useState
-    const [ledOn, setLedOn] = useState(false);
-    const [fanOn, setFanOn] = useState(false);
-    const [pumpOn, setPumpOn] = useState(false);
+    const [ledOn, setLedOn] = useState();
+    const [fanOn, setFanOn] = useState();
+    const [pumpOn, setPumpOn] = useState();
+
+    useEffect(()=>{
+        setLedOn(ledbool);
+        setFanOn(fanbool);
+        setPumpOn(pumpbool);
+    })
 
     return (
         <div className="LedFanBox">
