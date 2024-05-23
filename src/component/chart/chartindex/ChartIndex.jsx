@@ -1,9 +1,10 @@
 import React from 'react';
-import './chartinfo.css';
-import MixedChart from './ChartMain';
+import '../chartinfo.css';
+import ChartIndexInfo from './ChartIndexInfo';
 
 
-function ChartInfo({ WeekData }) {
+function ChartIndex({ IdxData }) {
+
     return(
 
       <div className="ChartBottom">
@@ -11,9 +12,8 @@ function ChartInfo({ WeekData }) {
               <div className="ChartBottomContainer">
                   <div className="ChartBottomFont">
 
-                    <MixedChart WeekData={WeekData}>
+                    <ChartIndexInfo IdxData={IdxData}/>
 
-                    </MixedChart>
                   </div>
               </div>
           </div>
@@ -21,4 +21,4 @@ function ChartInfo({ WeekData }) {
     )
 }
 
-export default ChartInfo;
+export default ChartIndex;

@@ -30,19 +30,19 @@ const options = {
     },
     title: {
       display: true,
-      text: '시간 별 통계',
+      text: '실시간 통계',
     },
   },
   maintainAspectRatio: false,
 };
 
-const labels = Array.from({ length: 24 }, (_, i) => i + 1);
+const labels = Array.from({ length: 100 }, (_, i) => i + 1);
 
-function updateChartData(chart, HourData) {
-  const safeHourData = Array.isArray(HourData) ? HourData : [];
-  const tempData = safeHourData.map(data => data.hourTempData || 0);
-  const humiData = safeHourData.map(data => data.hourHumiData || 0);
-  const groundData = safeHourData.map(data => (data.hourGround1Data + data.hourGround2Data) / 2 || 0);
+function updateChartData(chart, IdxData) {
+  const safeHourData = Array.isArray(IdxData) ? IdxData : [];
+  const tempData = safeHourData.map(data => data.IdxTempData || 0);
+  const humiData = safeHourData.map(data => data.IdxHumiData || 0);
+  const groundData = safeHourData.map(data => (data.IdxGround1Data + data.IdxGround2Data) / 2 || 0);
 
   chart.data.labels = labels;
   chart.data.datasets[0].data = tempData;
@@ -52,7 +52,7 @@ function updateChartData(chart, HourData) {
   chart.update();
 }
 
-export function ChartHourInfo({ HourData }) {
+export function ChartIndexInfo({ IdxData }) {
   const chartRef = useRef(null);
   const chartInstance = useRef(null);
 
@@ -97,12 +97,12 @@ export function ChartHourInfo({ HourData }) {
     }
 
     // Update chart data
-    updateChartData(chartInstance.current, HourData);
-  }, [HourData]); // Re-run useEffect when MonthData changes
+    updateChartData(chartInstance.current, IdxData);
+  }, [IdxData]); // Re-run useEffect when MonthData changes
 
-  return <div style={{ height: "28vw", width: "65vw" }}>
+  return <div style={{ height: "28vw", width: "75vw" }}>
     <canvas ref={chartRef}></canvas>
   </div>;
 }
 
-export default ChartHourInfo;
+export default ChartIndexInfo;

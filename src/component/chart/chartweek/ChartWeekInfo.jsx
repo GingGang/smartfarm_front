@@ -55,7 +55,7 @@ function updateChartData(chart, WeekData) {
   chart.update();
 }
 
-export function MixedChart({ WeekData }) {
+export function ChartWeekInfo({ WeekData }) {
   const chartRef = useRef(null);
   const chartInstance = useRef(null);
 
@@ -103,9 +103,9 @@ export function MixedChart({ WeekData }) {
     updateChartData(chartInstance.current, WeekData);
   }, [WeekData]); // Re-run useEffect when WeekData changes
 
-  return <div style={{ height: "28vw", width: "75vw" }}>
+  return <div style={{ height: "28vw", width: "65vw" }}>
     <canvas ref={chartRef}></canvas>
   </div>;
 }
 
-export default MixedChart;
+export default ChartWeekInfo;

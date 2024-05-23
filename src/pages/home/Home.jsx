@@ -1,16 +1,14 @@
 import React from "react";
 import './home.css';
 import Graph from "../../component/graph/Graph";
-import FeaturedInfoBottom from "../../component/temp/Temp";
-import ChartInfo from "../../component/chart/ChartInfo";
+import ChartInfo from "../../component/chart/chartweek/ChartWeek";
 import Water from "../../component/water/Water";
 import LandWater from "../../component/landwater/LandWater";
-import { Leaderboard, SensorDoor } from "@mui/icons-material";
 import LedFanBool from "../../component/ledfanbool/LedFanBool";
-import PumpBool from "../../component/pumpbool/PumpBool";
+import ChartIndex from "../../component/chart/chartindex/ChartIndex";
 
 
-export default function Home({ LatestData, WeekData })
+export default function Home({ LatestData, IdxData })
 {
     return( 
         <div className="home">
@@ -21,8 +19,8 @@ export default function Home({ LatestData, WeekData })
                 <LedFanBool ledbool={LatestData.LatestLedData} fanbool={LatestData.LatestFanData} pumpbool={LatestData.LatestPumpData}/>
             </div>
             <div>
-                <ChartInfo 
-                    WeekData={WeekData}
+                <ChartIndex 
+                    IdxData={IdxData}
                 />
             </div>
             
