@@ -5,8 +5,8 @@
 
 .HomeHistoryIn{
     flex:1;
-    margin: 1.5vw; /* 상대적인 마진 값 설정 */
-    padding: 2vw; /* 유지 */
+    margin:0vw; /* 상대적인 마진 값 설정 */
+    padding: 0vw; /* 유지 */
     border-radius: 1vw; /* 상대적인 값을 사용 */
     background-color: white;
     -webkit-box-shadow: 0px 0px 1.2vw -0.1vw #000000; /* 상대적인 그림자 크기 */
@@ -20,7 +20,7 @@
 }
 
 .HomeHistoryContainer {
-    margin: 1vw 0; /* 상대적인 마진 값 설정 */
+    margin-top: 2vw;/* 상대적인 마진 값 설정 */
     display: flex;
     align-items: center;
     padding: 0.5vw; /* 유지 */

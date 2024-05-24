@@ -100,7 +100,7 @@ export function ChartIndexInfo({ IdxData }) {
     updateChartData(chartInstance.current, IdxData);
   }, [IdxData]); // Re-run useEffect when MonthData changes
 
-  return <div style={{ height: "28vw", width: "75vw" }}>
+  return <div style={{ height: "28vw", width: "65vw" }}>
     <canvas ref={chartRef}></canvas>
   </div>;
 }

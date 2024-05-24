@@ -18,7 +18,7 @@ export default function Home({ LatestData, IdxData })
                 <LandWater ground1={LatestData.LatestGround1Data} ground2={LatestData.LatestGround2Data}/>
                 <LedFanBool ledbool={LatestData.LatestLedData} fanbool={LatestData.LatestFanData} pumpbool={LatestData.LatestPumpData}/>
             </div>
-            <div>
+            <div className="homeChartMargin">
                 <ChartIndex 
                     IdxData={IdxData}
                 />

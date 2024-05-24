@@ -8,5 +8,10 @@
 
 .homeMargin{
     margin-top: -55px;
+    margin-left: 5vw;
     display: flex;
+}
+
+.homeChartMargin{
+    margin-left: 4.5vw;
 }

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import './ledfanbool.css';
+import styled from "styled-components";
 
 import WbIncandescentOutlinedIcon from '@mui/icons-material/WbIncandescentOutlined';
 import WbIncandescentIcon from '@mui/icons-material/WbIncandescent';
@@ -22,31 +23,38 @@ export default function LedFanBool({ledbool,fanbool,pumpbool}) {
         setPumpOn(pumpbool);
     })
 
+    const FontDiv = styled.div`
+      font-family: 'SCDream', sans-serif;
+`   ;
+
     return (
         <div className="LedFanBox">
+            <FontDiv>
             <div className="LedFanIn">
                 <div className="LedFanContainer">
                     <span className="LedFanFont">
-                        LED : {
-                            ledOn 
-                            ? <WbIncandescentOutlinedIcon style={{ fontSize: '35px'}} />
-                            : <WbIncandescentIcon style={{ fontSize: '35px'}} />
+                        LED 
+                        FAN 
+                        펌프<br/>
+                        {
+                            ledOn
+                            ? <WbIncandescentOutlinedIcon style={{ fontSize: '2.5vw', marginLeft: '0.3vw'}} />
+                            : <WbIncandescentIcon style={{ fontSize: '2.5vw', marginLeft: '0.3vw'}} />
                         }
-                        <br />
-                        FAN : {
+                        {
                             fanOn 
-                            ? <AirIcon style={{ fontSize: '35px', marginRight: '10px'}} />
-                            : <ModeFanOffIcon style={{ fontSize: '35px', marginRight: '10px'}} />
-                            
+                            ? <AirIcon style={{ fontSize: '2.5vw', marginLeft: '2vw'}} />
+                            : <ModeFanOffIcon style={{ fontSize: '2.5vw', marginLeft: '2vw'}} />   
                         }
-                        펌프 : {
+                        {
                             pumpOn 
-                            ? <SensorsIcon style={{ fontSize: '35px'}} />
-                            : <SensorsOffIcon style={{ fontSize: '35px'}} />
+                            ? <SensorsIcon style={{ fontSize: '2.5vw', marginLeft: '2vw'}} />
+                            : <SensorsOffIcon style={{ fontSize: '2.5vw', marginLeft: '2vw'}} />
                         }
                     </span>
                 </div>
             </div>
+            </FontDiv>
         </div>
     );
 }

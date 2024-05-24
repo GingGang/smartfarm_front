@@ -3,7 +3,7 @@ import '../chartinfo.css';
 import ChartWeekInfo from './ChartWeekInfo';
 
 
-function ChartInfo({ WeekData }) {
+function ChartWeek({ WeekData }) {
     return(
 
       <div className="ChartBottom">
@@ -19,4 +19,4 @@ function ChartInfo({ WeekData }) {
     )
 }
 
-export default ChartInfo;
+export default ChartWeek;

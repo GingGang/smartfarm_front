@@ -1,5 +1,5 @@
 .LandWaterBox{
-    width: 80%; /* 유지 */
+    width: 60%; /* 유지 */
     height: 55%;
     display: flex;
 }
@@ -7,9 +7,9 @@
 .LandWaterBoxIn{
     flex: 1;
     margin: 1vw; /* 상대적 마진 값으로 조정 */
-    padding: 1.5vw; /* 유지 */
+    padding: 0.2vw; /* 유지 */
     border-radius: 1vw; /* 상대적 값으로 조정 */
-    background-color: white;
+    background-color: #f0f1f4;
     -webkit-box-shadow: 0px 0px 1.2vw -0.1vw #000000; /* 상대적 그림자 크기 */
     box-shadow: 0px 0px 1.2vw -0.1vw #000000; /* 상대적 그림자 크기 */
 }
@@ -21,15 +21,44 @@
     padding: 0.5vw; /* 유지 */
 }
 
-.LandWaterBoxFont{
-    font-size: clamp(0.7vw, 1vw, 1.2vw);/* 해상도에 따라 조정되되 최소 15px, 최대 30px 사이로 조정 */
-    font-weight: 550; /* 수정된 폰트 가중치 (원래 값이 올바르지 않아 보임) */
+.LandWaterBoxTextContainer {
+    display: flex;
+    flex-direction: column; /* 세로로 배치 */
+    margin-left: 0.5vw; /* 아이콘과 텍스트 사이의 간격 */
+}
+
+.LandWaterBoxFontTop {
+    font-size: clamp(1vw, 1.2vw, 1.4vw); /* 온도의 폰트 크기를 줄임 */
+    font-weight: 550;
     white-space: nowrap;
-    margin-left: 0.8vw;
+    margin-left: 0vw;
+}
+
+.LandWaterBoxFontTop{
+    font-size: clamp(1vw, 1.2vw, 1.4vw); /* 온도의 폰트 크기를 줄임 */
+    font-weight: 550;
+    white-space: nowrap;
+    margin-left: 0vw;
+}
+
+.LandWaterBoxFontBottom {
+    font-size: clamp(1.6vw, 1.9vw, 2.1vw); /* temp의 폰트 크기를 유지 */
+    font-weight: 550;
+    white-space: nowrap;
+    
+    margin-left: 0vw;
+}
+
+.LandWaterBoxFontBottomBottom {
+    font-size: clamp(1vw, 1.2vw, 1.4vw); /* temp의 폰트 크기를 유지 */
+    font-weight: 550;
+    white-space: nowrap;
+    margin-bottom: 0.5vw;
+    margin-left: 2.5vw;
 }
 
 .LandWaterBoxRate{
     display: flex;
     align-items: center;
-    margin-left: 2vw; /* 상대적 마진 값으로 조정 */
+    margin-left: 2.5vw; /* 상대적 마진 값으로 조정 */
 }
