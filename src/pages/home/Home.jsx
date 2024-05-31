@@ -12,10 +12,10 @@ export default function Home({ LatestData, IdxData })
     return( 
         <div className="home">
             <div className="homeMargin">
-                <Graph temp={LatestData.LatestTempData} />
-                <Water humi={LatestData.LatestHumiData}/>
-                <LandWater ground1={LatestData.LatestGround1Data} ground2={LatestData.LatestGround2Data}/>
-                <LedFanBool ledbool={LatestData.LatestLedData} fanbool={LatestData.LatestFanData} pumpbool={LatestData.LatestPumpData}/>
+                <Graph temp={LatestData.LatestTempData} IdxData={IdxData} />
+                <Water humi={LatestData.LatestHumiData} IdxData={IdxData}/>
+                <LandWater ground1={LatestData.LatestGround1Data} ground2={LatestData.LatestGround2Data} IdxData={IdxData}/>
+                <LedFanBool ledbool={LatestData.LatestLedData} fanbool={LatestData.LatestFanData} pumpbool={LatestData.LatestPumpData} IdxData={IdxData}/>
             </div>
             <div className="homeChartMargin">
                 <ChartIndex 

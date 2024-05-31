@@ -7,6 +7,7 @@ import Topbar from './component/topbar/Topbar';
 import Sidebar from './component/sidebar/Sidebar';
 import Home from './pages/home/Home';
 import HomeCamera from './component/homecamera/HomeCamera';
+import HomeCameraY from './component/homecamera/HomeCameraY';
 import HomeHistory from './pages/home/HomeHistory';
 
 // Stylesheet import
@@ -14,7 +15,7 @@ import './app.css';
 
 function App() {
 
-
+  const [pageTitle, setPageTitle] = useState("DASHBOARD");
   const [LatestSensorData, setLatestSensorData] = useState({
     LatestTempData: [],
     LatestHumiData: [],
@@ -78,11 +79,13 @@ function App() {
       setIsLoading(true); // 데이터를 가져오기 시작할 때 로딩 상태를 true로 설정
       try {
 
-        const response_Latest = await fetch('http://61.79.252.245:8000/api/latest');
-        
-        const response_Index100 = await fetch('http://61.79.252.245:8000/api/idx100');
+        const ip_address = '59.16.82.65';
 
-        const response_Month = await fetch('http://61.79.252.245:8000/api/month', {
+        const response_Latest = await fetch(`http://${ip_address}:8000/api/latest`);
+                
+        const response_Index100 = await fetch(`http://${ip_address}:8000/api/idx100`);
+
+        const response_Month = await fetch(`http://${ip_address}:8000/api/month`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -93,7 +96,7 @@ function App() {
           })
         });
 
-        const response_Week = await fetch('http://61.79.252.245:8000/api/week', {
+        const response_Week = await fetch(`http://${ip_address}:8000/api/week`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -102,11 +105,10 @@ function App() {
             year: now.getFullYear(),
             month: now.getMonth()+1,
             week: getWeekOfMonth(now)
-
           })
         });
 
-        const response_Hour = await fetch('http://61.79.252.245:8000/api/hourly', {
+        const response_Hour = await fetch(`http://${ip_address}:8000/api/hourly`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -115,13 +117,14 @@ function App() {
             date: now.getFullYear()+"-0"+(now.getMonth()+1)+"-"+now.getDate()
           })
         });
+
   
         const jsonResponse_Latest = await response_Latest.json();
         const jsonResponse_Week = await response_Week.json();
         const jsonResponse_Month = await response_Month.json();
         const jsonResponse_Hour = await response_Hour.json();
         const jsonResponse_Index100 = await response_Index100.json();
-        const { Latest_temperature, Latest_humidity, Latest_ground1, Latest_ground2,Latest_led,Latest_sysfan,Latest_wpump } = jsonResponse_Latest;
+        const { latest_temperature, latest_humidity, latest_ground1, latest_ground2,latest_led,latest_sysfan,latest_wpump } = jsonResponse_Latest;
         
         let weekSensorDataArray = []; // 2차원 배열을 초기화합니다.
         let monthSensorDataArray = [];
@@ -185,13 +188,13 @@ function App() {
         }
 
         setLatestSensorData({
-          LatestTempData: Latest_temperature,
-          LatestHumiData: Latest_humidity,  
-          LatestGround1Data: Latest_ground1,
-          LatestGround2Data: Latest_ground2,
-          LatestLedData : Latest_led,
-          LatestFanData : Latest_sysfan,
-          LatestPumpData : Latest_wpump
+          LatestTempData: latest_temperature,
+          LatestHumiData: latest_humidity,  
+          LatestGround1Data: latest_ground1,
+          LatestGround2Data: latest_ground2,
+          LatestLedData : latest_led,
+          LatestFanData : latest_sysfan,
+          LatestPumpData : latest_wpump
         });
 
   
@@ -215,13 +218,13 @@ function App() {
 
   return (
     <div className="App">
-      <Topbar />
+      <Topbar topbarTitle={pageTitle} /> {/* 상태를 props로 전달 */}
       <div className="container">
-        <Sidebar />
+        <Sidebar setPageTitle={setPageTitle} /> {/* 상태 업데이트 함수를 props로 전달 */}
         <div className="others">
           <Routes>
             <Route exact path="/" element={<Home LatestData={LatestSensorData} IdxData={IdxSensorData}/>} />
-            <Route path="/camera" element={<HomeCamera />} />
+            <Route path="/camera" element={<HomeCameraY />} />
             <Route path="history/*" element={<HomeHistory MonthData={MonthSensorData} HourData={HourSensorData} WeekData={WeekSensorData}/>} />
           </Routes>
         </div>

@@ -1,42 +1,42 @@
 .Box{
-    width: 22.5%; /* 유지 */
+    width: 22.5%;
     height: 55%;
     display: flex;
 }
 
 .Box_In {
     flex: 1;
-    margin: 1vw; /* 상대적인 마진 값 설정 */
+    margin: 1vw;
     padding: 0.1vw;
-    border-radius: 1vw; /* 상대적인 값을 사용 */
+    border-radius: 1vw;
     background-color: #f0f1f4;
-    -webkit-box-shadow: 0px 0px 1.2vw -0.1vw #000000; /* 상대적인 그림자 크기 */
-    box-shadow: 0px 0px 1.2vw -0.1vw #000000; /* 상대적인 그림자 크기 */
+    -webkit-box-shadow: 0px 0px 1.2vw -0.1vw #000000;
+    box-shadow: 0px 0px 1.2vw -0.1vw #000000;
 }
 
 .Box_Container {
-    margin: 1vw 0; /* 상대적인 마진 값 설정 */
+    margin: 1vw 0;
     display: flex;
     align-items: center;
-    padding: 0.5vw; /* 유지 */
+    padding: 0.5vw;
 }
 
 .Box_Container_Text {
     display: flex;
-    flex-direction: column; /* 세로로 배치 */
-    margin-left: 0.5vw; /* 아이콘과 텍스트 사이의 간격 */
+    flex-direction: column;
+    margin-left: 1vw;
 }
 
 
 .Box_Font_Top {
-    font-size: clamp(1vw, 1.2vw, 1.4vw); /* 온도의 폰트 크기를 줄임 */
+    font-size: clamp(1vw, 1.2vw, 1.4vw);
     font-weight: 550;
     white-space: nowrap;
     margin-left: 0vw;
 }
 
 .Box_Font_Bottom {
-    font-size: clamp(1.6vw, 1.9vw, 2.1vw); /* temp의 폰트 크기를 유지 */
+    font-size: clamp(1.6vw, 1.9vw, 2.1vw);
     font-weight: 550;
     white-space: nowrap;
     
@@ -44,7 +44,7 @@
 }
 
 .Box_Font_LowBottom {
-    font-size: clamp(1vw, 1.2vw, 1.4vw); /* temp의 폰트 크기를 유지 */
+    font-size: clamp(1vw, 1.2vw, 1.4vw);
     font-weight: 550;
     white-space: nowrap;
     margin-bottom: 0.5vw;
@@ -53,21 +53,21 @@
 
 /*SensorBool.css*/
 .Sensor_Box{
-    width: 1000%; /* 유지 */
+    width: 1000%;
     height: 55%;
     display: flex;
 }
 
 
 .Sensor_Font {
-    font-size: clamp(1.7vw, 1.9vw, 2.1vw); /* 해상도에 따라 조정되되 최소 15px, 최대 30px 사이로 조정 */
-    font-weight: 550; /* 수정된 폰트 가중치 (원래 값이 올바르지 않아 보임) */
+    font-size: clamp(1.7vw, 1.9vw, 2.1vw);
+    font-weight: 550;
     white-space: nowrap;
 }
 
 .Sensor_Box_Container {
-    margin: 1vw 0; /* 상대적인 마진 값 설정 */
+    margin: 1vw 0;
     display: flex;
     align-items: center;
-    padding: 0.8vw; /* 유지 */
+    padding: 0.8vw;
 }

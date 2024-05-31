@@ -25,9 +25,9 @@ export default function SensorBool({ledbool,fanbool,pumpbool}) {
     const [pumpOn, setPumpOn] = useState();
 
     useEffect(()=>{
-        setLedOn(true);
-        setFanOn(true);
-        setPumpOn(true);
+        setLedOn(ledOn);
+        setFanOn(fanOn);
+        setPumpOn(pumpOn);
     })
 
 
