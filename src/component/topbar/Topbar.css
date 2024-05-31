@@ -35,6 +35,23 @@
     left: 17vw; /* 중앙에 고정하고 싶다면 */
 }
 
+.login {
+    cursor: pointer;
+    position: absolute; /* 고정 위치 설정 */
+
+    top: 1.5vw; /* 원하는 위치에 고정 */
+    left: 95vw; /* 중앙에 고정하고 싶다면 */
+
+    border-radius: 2vw;
+    background-color: white;
+    padding:0.3vw;
+}
+
+.loginText{
+    text-align: center;
+    padding-bottom: 5px;
+    margin-top: -0.2vw;
+}
 
 .topRight {
     display: flex;

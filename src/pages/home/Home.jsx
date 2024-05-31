@@ -1,10 +1,9 @@
 import React from "react";
 import './home.css';
-import Graph from "../../component/graph/Graph";
-import ChartInfo from "../../component/chart/chartweek/ChartWeek";
-import Water from "../../component/water/Water";
-import LandWater from "../../component/landwater/LandWater";
-import LedFanBool from "../../component/ledfanbool/LedFanBool";
+import Graph from "../../component/dashboard/graph/Graph";
+import Water from "../../component/dashboard/water/Water";
+import LandWater from "../../component/dashboard/landwater/LandWater";
+import LedFanBool from "../../component/dashboard/sensor/SensorBool";
 import ChartIndex from "../../component/chart/chartindex/ChartIndex";
 
 

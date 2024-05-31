@@ -16,6 +16,7 @@
     margin-top: 20%;
     cursor: pointer;
     border-radius: 10px;
+    white-space: nowrap;
 }
 
 .sidebarListItem.active,
@@ -38,7 +39,7 @@
 
 .SidebarText {
     text-align: center;
-    font-size: clamp(20px, 3vw, 30px); /* 최소 20px, 뷰포트 너비의 3%, 최대 30px */
+    font-size: clamp(1.5vw, 2vw, 2.5vw); /* 최소 20px, 뷰포트 너비의 3%, 최대 30px */
     white-space: nowrap;
 }
 
@@ -47,6 +48,7 @@
     display: flex; /* 플렉스박스로 설정 */
     align-items: center; /* 요소들을 수직 방향으로 중앙 정렬 */
     vertical-align: middle;
+    margin-left: 1vw;
 }
 
 .SidebarLogoText{

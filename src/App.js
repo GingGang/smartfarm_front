@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Routes, Route } from "react-router-dom";
+import {Routes, Route } from "react-router-dom";
 
 
 // Components import
@@ -13,6 +13,8 @@ import HomeHistory from './pages/home/HomeHistory';
 import './app.css';
 
 function App() {
+
+
   const [LatestSensorData, setLatestSensorData] = useState({
     LatestTempData: [],
     LatestHumiData: [],
@@ -51,30 +53,36 @@ function App() {
     IdxTempData: []
   });
 
-  const getWeekOfMonth = (date) => {
-    const startWeekDayIndex = 1; // 월요일을 주의 시작으로 설정 (일요일을 시작으로 하려면 0)
-    const firstDate = new Date(date.getFullYear(), date.getMonth(), 1);
-    const firstDay = (firstDate.getDay() + 7 - startWeekDayIndex) % 7;
-    const dayOfMonth = date.getDate();
+  function getWeekOfMonth() {
+    const today = new Date();
+    const firstDayOfMonth = new Date(today.getFullYear(), today.getMonth(), 1);
+    const dayOfWeek = firstDayOfMonth.getDay();
   
-    return Math.ceil((dayOfMonth + firstDay) / 7);
-  };
-
+    let weekNumber = Math.ceil((today.getDate() + dayOfWeek) / 7);
+  
+    if (dayOfWeek !== 1) {
+      weekNumber--;
+    }
+  
+    return weekNumber;
+  }
+  
   const [isLoading, setIsLoading] = useState(false); // 로딩 상태 추가
 
   useEffect(() => {
     async function fetchSensorData() {
 
       const now = new Date();
-      
+
 
       setIsLoading(true); // 데이터를 가져오기 시작할 때 로딩 상태를 true로 설정
       try {
-        const response_Latest = await fetch('http://192.168.219.103:8000/api/latest');
-        
-        const response_Index100 = await fetch('http://192.168.219.103:8000/api/idx100');
 
-        const response_Month = await fetch('http://192.168.219.103:8000/api/month', {
+        const response_Latest = await fetch('http://61.79.252.245:8000/api/latest');
+        
+        const response_Index100 = await fetch('http://61.79.252.245:8000/api/idx100');
+
+        const response_Month = await fetch('http://61.79.252.245:8000/api/month', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -85,7 +93,7 @@ function App() {
           })
         });
 
-        const response_Week = await fetch('http://192.168.219.103:8000/api/week', {
+        const response_Week = await fetch('http://61.79.252.245:8000/api/week', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -94,10 +102,11 @@ function App() {
             year: now.getFullYear(),
             month: now.getMonth()+1,
             week: getWeekOfMonth(now)
+
           })
         });
 
-        const response_Hour = await fetch('http://192.168.219.103:8000/api/hourly', {
+        const response_Hour = await fetch('http://61.79.252.245:8000/api/hourly', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -203,7 +212,6 @@ function App() {
 
   }, []);
 
-  console.log(IdxSensorData);
 
   return (
     <div className="App">
