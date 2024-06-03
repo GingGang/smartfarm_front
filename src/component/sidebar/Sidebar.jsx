@@ -23,7 +23,7 @@ export default function Sidebar({ setPageTitle }) { // props 추가
         <div className="sidebarListItem">
           <div className="SidebarLogo">
             <img src={dashboard} alt='logo image' style={{marginTop:'0.2vw'}}/>
-            <h3 onClick={() => { navigate('/'); setPageTitle("DASHBOARD"); }} className="SidebarText">Dashboard</h3> {/* 수정 */}
+            <h3 onClick={() => { navigate('/dashboard'); setPageTitle("DASHBOARD"); }} className="SidebarText">Dashboard</h3> {/* 수정 */}
           </div>
         </div>
 

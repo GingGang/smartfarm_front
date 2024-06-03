@@ -9,6 +9,7 @@ import Home from './pages/home/Home';
 import HomeCamera from './component/homecamera/HomeCamera';
 import HomeCameraY from './component/homecamera/HomeCameraY';
 import HomeHistory from './pages/home/HomeHistory';
+import Login from './component/login/Login';
 
 // Stylesheet import
 import './app.css';
@@ -218,13 +219,15 @@ function App() {
 
   return (
     <div className="App">
+      {/*<Route exact path="/" element={<Login/>} />*/}
       <Topbar topbarTitle={pageTitle} /> {/* 상태를 props로 전달 */}
       <div className="container">
         <Sidebar setPageTitle={setPageTitle} /> {/* 상태 업데이트 함수를 props로 전달 */}
         <div className="others">
           <Routes>
-            <Route exact path="/" element={<Home LatestData={LatestSensorData} IdxData={IdxSensorData}/>} />
-            <Route path="/camera" element={<HomeCameraY />} />
+
+            <Route path="/dashboard" element={<Home LatestData={LatestSensorData} IdxData={IdxSensorData}/>} />
+            <Route path="/camera" element={<HomeCamera />} />
             <Route path="history/*" element={<HomeHistory MonthData={MonthSensorData} HourData={HourSensorData} WeekData={WeekSensorData}/>} />
           </Routes>
         </div>

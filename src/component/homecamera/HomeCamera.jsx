@@ -58,7 +58,7 @@ function HomeCamera() {
 
   return (
     <div className="HomeCameraContainer">
-      <video className="HomeCameraVideo" ref={videoRef} autoPlay></video>
+      <video className="HomeCameraVideo" ref={videoRef} autoPlay  width="2080" height="720"></video>
     </div>
   );
 }
